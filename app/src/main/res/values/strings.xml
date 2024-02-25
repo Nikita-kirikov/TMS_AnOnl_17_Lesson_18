@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TMS_lesson_18</string>
+    <string name="login_placeholder">Login placeholder</string>
+    <string name="password_placeholder">Password placeholder</string>
+    <string name="enter">enter</string>
+    <string name="h1">enter your data for enter in system</string>
+    <string name="news">agree to receive news</string>
+    <string name="discount">agree to receive discount offers</string>
+    <string name="cookies">agree to the processing of cookies
+</string>
+</resources>
