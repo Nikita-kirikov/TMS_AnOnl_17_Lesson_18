@@ -21,24 +21,15 @@ class MainActivity2 : AppCompatActivity() {
         val discount = intent.getStringExtra("discount")
         val cookies = intent.getStringExtra("cookies")
 
-        if (login != null) {
-            text1.text = login
-        }
+        text1.text = login ?: ""
 
-        if (password != null) {
-            text2.text = password
-        }
+        text2.text = password ?: ""
 
-        if (news != null) {
-            text3.text = news
-        }
+        text3.text = news ?: ""
 
-        if (discount != null) {
-            text4.text = discount
-        }
+        text4.text = discount ?: ""
 
-        if (cookies != null) {
-            text5.text = cookies
-        }
+        text5.text = cookies ?: ""
+
     }
 }

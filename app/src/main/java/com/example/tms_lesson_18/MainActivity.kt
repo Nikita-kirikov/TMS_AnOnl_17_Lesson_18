@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         login.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                button.isEnabled = login.length() >= 6 && password.length() >= 6
+                button.isEnabled = login.length() >= MIN_LENGTH && password.length() >= MIN_LENGTH
             }
             override fun afterTextChanged(p0: Editable?) {}
         })
@@ -44,9 +44,13 @@ class MainActivity : AppCompatActivity() {
         password.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                button.isEnabled = password.length() >= 6 && login.length() >= 6
+                button.isEnabled = password.length() >= MIN_LENGTH && login.length() >= MIN_LENGTH
             }
             override fun afterTextChanged(p0: Editable?) {}
         })
+    }
+
+    companion object {
+        private const val MIN_LENGTH = 6
     }
 }
